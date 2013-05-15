@@ -1,0 +1,54 @@
+#N canvas 267 109 1246 787 10;
+#X declare -path .;
+#X declare -path rj;
+#X obj 684 -294 declare -path .;
+#X obj 785 -294 declare -path rj;
+#X obj 684 -263 OVERVIEW;
+#X text 752 -264 of all RjDj abstractions;
+#X obj 559 -92 vsl 15 128 0 127 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 0 1;
+#X obj 529 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 633 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 538 82 m_thresholds 5 50;
+#X text 647 82 low and high thresh;
+#X text 553 -118 heart data input;
+#X msg 666 183 1 \, 0 200;
+#X obj 653 312 dac~;
+#X obj 634 228 osc~ 500;
+#X obj 669 270 *~;
+#X obj 692 223 line~;
+#X text 784 79 schmit trigger;
+#X obj 252 122 u_follower;
+#X floatatom 307 47 5 0 0 0 - - -;
+#X text 344 46 smoothness factor (0-1);
+#X obj 302 -12 loadbang;
+#X msg 301 14 0.99;
+#X obj 780 242 timer;
+#X obj 777 204 t b b;
+#X floatatom 782 271 5 0 0 0 - - -;
+#X text 816 272 time between bang in ms;
+#X obj 932 392 metro;
+#X obj 902 365 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 869 305 u_mean 5;
+#X connect 4 0 16 0;
+#X connect 6 0 10 0;
+#X connect 6 0 22 0;
+#X connect 7 0 5 0;
+#X connect 7 1 6 0;
+#X connect 10 0 14 0;
+#X connect 12 0 13 0;
+#X connect 13 0 11 0;
+#X connect 13 0 11 1;
+#X connect 14 0 13 1;
+#X connect 16 0 7 0;
+#X connect 17 0 16 1;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 21 0 23 0;
+#X connect 22 0 21 0;
+#X connect 22 1 21 1;
+#X connect 23 0 25 1;
+#X connect 26 0 25 0;

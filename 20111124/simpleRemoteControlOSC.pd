@@ -1,0 +1,32 @@
+#N canvas 579 98 665 876 24;
+#X declare -lib mrpeach;
+#X obj 62 40 gemhead;
+#X obj 62 109 pix_video;
+#X obj 80 479 gemwin;
+#X obj 62 180 pix_texture;
+#X msg 215 362 create \, 1;
+#X msg 221 420 destroy;
+#X msg 212 41 dimen 640 480;
+#X floatatom 242 136 5 0 0 0 - - -;
+#X floatatom 274 184 5 0 0 0 - - -;
+#X obj 61 231 sphere 5;
+#X obj 317 571 unpackOSC;
+#X obj 315 467 import mrpeach;
+#X obj 318 621 route /size /segments;
+#X obj 316 527 udpreceive 7000;
+#X text 31 682 n= NetAddr("127.0.0.1" \, 7000) n.sendMsg("/size" \,
+4) n.sendMsg("/size" \, 10) n.sendMsg("/segments" \, 3) n.sendMsg("/segments"
+\, 30);
+#X text 42 642 sc code:;
+#X connect 0 0 1 0;
+#X connect 1 0 3 0;
+#X connect 3 0 9 0;
+#X connect 4 0 2 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 9 1;
+#X connect 8 0 9 2;
+#X connect 10 0 12 0;
+#X connect 12 0 7 0;
+#X connect 12 1 8 0;
+#X connect 13 0 10 0;

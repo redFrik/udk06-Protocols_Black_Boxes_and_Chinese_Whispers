@@ -1,0 +1,7 @@
+#N canvas 685 124 646 573 24;
+#X obj 255 66 acc;
+#X obj 146 69 mic;
+#X obj 149 387 speaker;
+#X obj 144 213 bpf;
+#X connect 1 0 3 0;
+#X connect 3 0 2 0;

@@ -1,0 +1,188 @@
+#N canvas 146 22 1444 1006 24;
+#X declare -lib mrpeach;
+#X obj 160 266 import mrpeach;
+#X obj 376 251 udpreceive 9000;
+#X obj 372 310 unpackOSC;
+#X obj 348 501 print;
+#X obj 338 460 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 692 135 fred: 194.95.203.192;
+#X obj 587 859 udpsend;
+#X text 685 382 annie: 194.95.203.146;
+#X obj 716 867 packOSC;
+#X msg 712 821 send /test 0 1 2 3;
+#X msg 550 711 disconnect;
+#X text 701 187 mari: 194.95.203.21;
+#X text 686 287 phil: 194.95.203.198;
+#X text 691 429 joon: 194.95.203.37;
+#X text 693 340 hyejoo: 194.95.203.199;
+#X text 696 487 yair: 194.95.203.29;
+#X text 694 540 chris: 194.95.203.183;
+#X text 704 581 karen: 194.95.203.170;
+#X text 706 620 tobias: 194.95.203.71;
+#X obj 382 623 + 1;
+#X floatatom 382 580 5 0 0 0 - - -;
+#X floatatom 380 671 5 0 0 0 - - -;
+#X msg 306 779 send /test \$1;
+#X obj 344 716 pipe 20;
+#X floatatom 489 585 5 0 0 0 - - -;
+#X obj 1052 541 dac~;
+#X obj 1169 472 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1063 425 readsf~;
+#X msg 1033 109 open \$1;
+#X msg 1088 376 start;
+#X obj 1030 42 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1028 68 openpanel;
+#X obj 1064 170 print;
+#X msg 1117 684 send /link bang;
+#X text 698 239 philip: 194.95.203.110;
+#X msg 1177 383 stop;
+#X msg 19 14 open /Applications/Max5/patches/media/talk.aiff \, start
+;
+#X msg 22 55 open /Applications/Max5/patches/media/talk.aiff \, start
+;
+#X msg 13 105 open /Applications/Max5/patches/media/talk.aiff \, start
+;
+#X obj 15 -26 sel 0 1 2;
+#X obj 30 -68 random 3;
+#X obj 157 -44 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1222 514 random 4;
+#X obj 19 499 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 62 496 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 93 537 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 84 586 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 39 602 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 13 580 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 8 546 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 182 548 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 186 473 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 217 499 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 239 556 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 206 615 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 152 599 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 137 539 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 151 501 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 9 435 serial;
+#X text 151 433 master/star;
+#X obj 85 730 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 137 757 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 63 782 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 99 789 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 171 801 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 126 826 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 75 856 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 1226 563 sel 0;
+#X obj 1308 610 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 1275 630 retrigger;
+#X obj 1123 725 bng 15 250 50 0 /link empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 1208 617 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 415 360 /link bang;
+#X obj 518 455 delay 1000;
+#X msg 589 762 connect 194.95.203.21 9000;
+#X obj 404 398 route /test /link /ip;
+#X text 16 688 nodebased/mesh setup;
+#X connect 1 0 2 0;
+#X connect 2 0 75 0;
+#X connect 8 0 6 0;
+#X connect 9 0 8 0;
+#X connect 10 0 6 0;
+#X connect 19 0 21 0;
+#X connect 20 0 19 0;
+#X connect 21 0 23 0;
+#X connect 22 0 8 0;
+#X connect 23 0 22 0;
+#X connect 24 0 19 0;
+#X connect 27 0 25 0;
+#X connect 27 0 25 1;
+#X connect 27 1 26 0;
+#X connect 28 0 27 0;
+#X connect 28 0 32 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 28 0;
+#X connect 33 0 8 0;
+#X connect 33 0 70 0;
+#X connect 35 0 27 0;
+#X connect 36 0 27 0;
+#X connect 37 0 27 0;
+#X connect 38 0 27 0;
+#X connect 39 0 36 0;
+#X connect 39 1 37 0;
+#X connect 39 2 38 0;
+#X connect 40 0 39 0;
+#X connect 41 0 40 0;
+#X connect 42 0 67 0;
+#X connect 43 0 44 0;
+#X connect 44 0 45 0;
+#X connect 45 0 46 0;
+#X connect 46 0 47 0;
+#X connect 47 0 48 0;
+#X connect 48 0 49 0;
+#X connect 49 0 43 0;
+#X connect 50 0 54 0;
+#X connect 50 0 53 0;
+#X connect 50 0 52 0;
+#X connect 50 0 51 0;
+#X connect 50 0 57 0;
+#X connect 50 0 55 0;
+#X connect 50 0 56 0;
+#X connect 51 0 50 0;
+#X connect 52 0 50 0;
+#X connect 53 0 50 0;
+#X connect 54 0 50 0;
+#X connect 55 0 50 0;
+#X connect 56 0 50 0;
+#X connect 57 0 50 0;
+#X connect 60 0 62 0;
+#X connect 60 0 66 0;
+#X connect 61 0 62 0;
+#X connect 61 0 63 0;
+#X connect 63 0 66 0;
+#X connect 63 0 65 0;
+#X connect 63 0 64 0;
+#X connect 64 0 60 0;
+#X connect 64 0 61 0;
+#X connect 65 0 62 0;
+#X connect 65 0 61 0;
+#X connect 65 0 63 0;
+#X connect 66 0 64 0;
+#X connect 67 0 33 0;
+#X connect 67 0 71 0;
+#X connect 67 1 68 0;
+#X connect 68 0 41 0;
+#X connect 68 0 73 0;
+#X connect 72 0 75 0;
+#X connect 73 0 42 0;
+#X connect 74 0 6 0;
+#X connect 75 0 4 0;
+#X connect 75 0 20 0;
+#X connect 75 1 41 0;
+#X connect 75 1 73 0;

@@ -1,0 +1,9 @@
+#N canvas 0 22 325 297 10;
+#X obj 173 219 dac~;
+#X obj 95 79 inlet~;
+#X obj 161 79 inlet~;
+#X obj 94 219 soundoutput;
+#X connect 1 0 0 0;
+#X connect 1 0 3 0;
+#X connect 2 0 0 1;
+#X connect 2 0 3 1;
