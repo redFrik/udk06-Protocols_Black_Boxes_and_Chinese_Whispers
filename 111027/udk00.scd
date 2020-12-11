@@ -11,9 +11,9 @@ http://entropie.digital.udk-berlin.de/wiki/Klasse_Generative_Kunst_/_Computation
      listening  ->  composing  ->  performing  >
 
 	<		<				<			<
-	
 
-	
+
+
 //tools: supercollider, pd, arduino
 
 

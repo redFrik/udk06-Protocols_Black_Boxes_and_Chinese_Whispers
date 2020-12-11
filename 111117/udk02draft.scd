@@ -5,7 +5,7 @@ SynthDef(\when, {|in= 0, thresh= 0.5, gate= 1, rel= 1, buf|
 	var input= HPF.ar(In.ar(in, 1)*gate, 40);
 	//var delay= DelayN.ar(input, 0.1, 0.1);
 	var track= Amplitude.ar(input, 0.01, rel);
-	
+
 	var trig= Trig1.kr(Onsets.kr(FFT(LocalBuf(512), input), thresh), 1);
 	var silent= (Schmidt.kr(Amplitude.kr(input*Trig1.kr(trig, 4), 0.01, 1), 0.02, 0.1)<1);
 	SendReply.kr(trig, 'onsets', [trig, track]);

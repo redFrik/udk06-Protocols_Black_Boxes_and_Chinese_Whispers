@@ -1,5 +1,5 @@
 
-http://www.youtube.com/user/instantdecomposer#p/a/u/1/oML8PzMu3Zs
+https://www.youtube.com/watch?v=oML8PzMu3Zs
 record new sounds into buffers
 pitch rate change
 repeats/stuttering
